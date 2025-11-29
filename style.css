@@ -1,0 +1,251 @@
+/* الحاوية الرئيسية */
+.video , .page-bg{
+    position: relative;
+    width: 100vw;   /* عرض كامل الشاشة */
+    height: 100vh;  /* ارتفاع كامل الشاشة */
+    overflow: hidden;
+}
+
+/* الفيديو */
+.video video, .page-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* يغطي بدون تشويه */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* المحتوى فوق الفيديو */
+.home-content , .content-box{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ .navbar {
+    border-radius: 20px;
+    position: fixed;      /* يثبت البار في مكانه */
+    top: 0;               /* أعلى الصفحة */
+    left: 0;
+    width: 100%;          /* يغطي عرض الصفحة كله */
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;        /* فوق كل العناصر */
+     box-shadow: 0 0 10px #ccc;
+}
+
+/* روابط التنقل */
+.navbar nav a {
+    font-size: larger;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.navbar nav a:hover {
+    color: silver;
+    text-decoration: wavy;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.intro{
+    text-align: left;
+    
+}
+
+body{
+    padding-top: 100px; /* حسب ارتفاع البار */
+    margin: auto;
+}
+/* الصورة كخلفية وتغطي الصفحة كاملة */
+
+
+/* صندوق المحتوى فوق الخلفية aboutus */
+.content-box {
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.4); /* شفافية عشان يبان الكلام */
+    border-radius: 10px;
+}
+
+.signin  {
+    size: 100px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* توسيط عمودي */
+    align-items: center;     /* توسيط أفقي */
+    min-height: (100vh - 70px);       /* ياخذ طول الشاشة */
+}
+.signin form{
+background-color: rgba(0, 0, 0, 0.4);
+    color: white;                    /* نصوص بيضاء */
+    padding: 70px ;              /* مساحة داخلية للفورم */
+    border-radius: 12px;             /* حواف دائرية */
+    border: 3px solid #122b46f0;       /* الحد الأزرق حوالين الفورم فقط */
+    width: 320px;                     /* عرض الفورم */
+    
+}
+
+
+
+
+
+/* تكبير الليبل */
+.signin label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* تكبير التكس بوكس */
+.signin input {
+    width: 100%;
+    padding: 14px;           /* ارتفاع أكبر */
+    font-size: 16px;          /* نص داخل التكس بوكس أكبر */
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* تكبير الزر */
+.signin button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    background-color: #203e5b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin button:hover {
+    background-color: #153658;
+}
+legend{
+    color:#122b46f0 ;
+}
+.signin form input[type="radio"] {
+    transform: scale(1.3); /* تكبير دائرة الراديو */
+    margin-right: 10px;    /* مسافة بين الدائرة والنص */
+    margin-bottom: 10px;
+    cursor: pointer;
+    }
+
+
+
+/* عنوان الصفحة */
+.title.sv {
+    text-align: center;
+    color: #0a3d62;
+    margin-bottom: 20px;
+}
+
+/* قائمة الخدمات */
+.ul.sv {
+    padding: 20px;
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.ul.sv li {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+/* تنسيق الجدول */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #bbb;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: #0a3d62;
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    background: #f0f0f0;
+}
+/* كرت المنتج */
+.products{
+    width: 220px;
+    height: 320;
+    margin: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+    text-align: center;
+     box-sizing: border-box;
+    
+}
+
+.products img {
+    width: 180px;
+    height: 150px;
+    border-radius: 10px;
+    margin:  10px ;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.products strong {
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* ترتيب المنتجات أفقي */
+.products-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px;
+    
+
+}
+
+.products-info strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.products-info p {
+    margin: 3px 0;
+    font-size: 16px;
+}
+.products img:hover {
+    transform: scale(1.1); 
+}

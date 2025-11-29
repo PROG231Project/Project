@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(img.signin.signup.jpeg);">
+
+<header class="navbar">
+    <img src="logo.png" width="80" alt="Shop Logo">
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="signin.html">Sign In</a>
+        <a href="signup.html">Sign Up</a>
+        <label for="colorPicker" style="margin-left: 10px; font-weight: bold;">Choose your style:</label>
+        <input type="color" id="colorpicker">
+    </nav>
+</header>
+<div class="signin">
+<h1>Sign In</h1>
+
+<form action="signin_process.html" method="post">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button type="submit" id="signin" onmousedown="onMousedown()" onmouseup="onMouseup()">Sign In</button>
+</form>
+
+<p>Don't have an account? <a href="signup.html">Sign Up here</a></p>
+<footer>
+    <p>© 2025 Online Shop - All Rights Reserved</p>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
